@@ -101,8 +101,8 @@ body {
 	justify-content: center;
 }
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-    color: #2c2c2c;  /* Texte en noir pour un contraste élevé */
-    background-color: #fff;  /* Fond en blanc */
+    color: #000000; 
+    background-color: #fff;  
     border-radius: 0;
 }
 .nav-pills .nav-link {
