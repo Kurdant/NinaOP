@@ -358,3 +358,42 @@ input[type="submit"] {
 	}
 }
 
+
+/* Css ajouté */
+
+body{
+	height: auto; 
+	min-height: 200vh;
+}
+
+.nav{
+	min-height: 2vh; 
+	height: auto;
+}
+
+.carousel-item img{
+	min-height:30%;
+}
+
+#about{
+	height: auto; 
+	width: auto; 
+	min-height: 70vh;
+}
+
+#about-me{
+	height: auto;
+}
+
+#gallery{
+	min-height: 100vh !important;
+}
+
+.container{
+	min-height: 100vh !important;
+}
+
+.gallery{
+	display: none; 
+	min-height: 100vh !important;
+}

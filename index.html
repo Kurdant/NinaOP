@@ -1,25 +1,40 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-	<link rel="prefetch" href="assets/images/instagram.png">
-
- 	<link rel="preload" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> 
-	<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"></noscript>
-	<link rel="preload" href="./assets/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-	<noscript><link rel="stylesheet" href="./assets/style.min.css"></noscript>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	
 	<meta charset="UTF-8">
-	<title>Nina Carducci</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="geo.region" content="FR-IDF" />
 	<meta name="description" content="Explorez l'essence de la photographie à travers mes yeux sur Nina Carducci, votre photographe passionné en Île-de-France. Capturant l'amour, la tendresse et la lumière, je fige les moments précieux pour vous offrir des souvenirs immortels.">
+	<title>Nina Carducci</title>
+
+	<!-- CSS et import bootstrap -->
+	<link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css">
+	<link href="./assets/style.min.css" as="style" rel='stylesheet'>
+	
+	<!-- Google fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+	<!-- JS -->
+	<!-- Slider et import bootstrap -->
+	<script src="./assets/bootstrap/bootstrap.bundle.min.js"></script>
+
+	 <!-- Import du Jquery ? -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	
+	 <!-- Code Jquery de la galerie -->
+	<script src="./assets/maugallery.min.js"></script>
+
+	<!-- Initier la galerie -->
+	<script src="./assets/scripts.js"></script>
+	
 </head>
-<body style="height: auto; min-height: 200vh;">
+<body>
 <header class="top-header">
 	<!-- <h3 class="name">Nina Carducci</h3> -->
 	<h1 class="name">Nina Carducci</h1>
-	<div class="nav" style="min-height: 2vh; height: auto;">   
+	<div class="nav">   
 		<ul>
 			<li><a href="#about">À propos</a></li>
 			<li><a href="#gallery">Galerie</a></li>
@@ -42,7 +57,7 @@
 			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
 			<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
 		</div>
-		<div class="carousel-inner"  style="min-height:30% ;">
+		<div class="carousel-inner">
 			<!--<div class="carousel-item active">
 				<img src="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp" height="auto" class="d-block w-100"alt="Nina Carducci Île-de-France - Homme qui marche">
 			</div>
@@ -57,7 +72,7 @@
 					srcset="./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash_mobile.webp 650w,
 							./assets/images/slider/ryoji-iwata-wUZjnOv7t0g-unsplash.webp		3840w" 
 					class="d-block w-100 h-auto" 
-					alt="A man seen from above is walking a pedestrian crossing" style="min-height:30%;"
+					alt="A man seen from above is walking a pedestrian crossing"
 				>
 			</div>
 			<div class="carousel-item">
@@ -65,7 +80,7 @@
 					srcset="./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash_mobile.webp	650w,
 							./assets/images/slider/nicholas-green-nPz8akkUmDI-unsplash.webp			3840w" 
 					class="d-block w-100 h-auto" 
-					alt="A crowd of people having fun at a concert" style="min-height:30%;"
+					alt="A crowd of people having fun at a concert"
 				>
 			</div>
 			<div class="carousel-item">
@@ -73,7 +88,7 @@
 					srcset="./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash_mobile.webp	650w,
 							./assets/images/slider/edward-cisneros-3_h6-1NPDGw-unsplash.webp		3840w" 
 					class="d-block w-100 h-auto" 
-					alt="The groom kisses his wife at their wedding" style="min-height:30%;"
+					alt="The groom kisses his wife at their wedding"
 				>
 			</div>
 		</div> 
@@ -90,7 +105,7 @@
 
 <!--about-->
 
-<div id="about" style="height: auto; width: auto; min-height: 70vh;">
+<div id="about">
 	<div class="picture left">
 		<img
 			srcset="./assets/images/nina_mobile.webp 650w,
@@ -99,17 +114,17 @@
 			alt="Profile picture of Nina Carducci"
 		>
 	</div>
-	<div id="about-me" style="height: auto;">
-		<h3 class="about-me__title">A propos de moi</h3>
+	<div id="about-me">
+		<h2 class="about-me__title">A propos de moi</h2>
 		<p class="about-me__introduction">Devenir photographe était pour moi une évidence. Comme si j’y étais prédestiné. Saisir un moment, une émotion, une situation, un endroit, une lumière et les rendre immortels, voilà ce qui me fait vibrer.</p>
 		<p class="about-me__description">Nous passons notre vie à chercher le bonheur, et lorsque nous y touchons, nous n’avons qu’une envie : le figer au travers de photographies pour le savourer avec les personnes qui sont importantes à nos yeux, ou le partager au plus grand nombre.
 			C’est ce que je vous propose : saisir ces merveilleux moments au travers de mon regard, mon approche, ma technique. Rendre ces moments immortels, afin que vous puissiez y puiser de l’amour, du bonheur, de la tendresse et de lumière à chaque fois que vous poserez les yeux sur vos photos.</p>
 	</div>
 </div>
-<div id="gallery" style="min-height: 100vh !important;">
+<div id="gallery">
 	<h3 class="title">Portfolio</h3>
-	<div class="container py-3" style="min-height: 100vh !important;">
-		<div class="gallery" style="display: none; min-height: 100vh !important;">
+	<div class="container py-3">
+		<div class="gallery">
 			<img data-gallery-tag="Concert" height="auto" class="gallery-item" src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.webp" alt="Nina Carducci Île-de-France - Concert">
 			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.webp" alt="Nina Carducci Île-de-France - Entreprise homme d'affaire">
 			<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.webp" alt="Nina Carducci Île-de-France - Entreprise femme souriante">
@@ -122,7 +137,7 @@
 		</div>
 	</div>
 	<div id="services">
-		<h3 class="title">Mes services</h3>
+		<h2 class="title">Mes services</h2>
 		<div class="container">
 			<div class="service">
 				<div class="service__description">
@@ -170,7 +185,7 @@
 <div id="contact">
 	<div class="container">
 		<div class="form-container">
-			<h3>Une question ? Une demande de devis ?</h3>
+			<h2>Une question ? Une demande de devis ?</h2>
 			<p> N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24 heures</p>
 			<form action="" method="post">
 				<label for="nom">Nom</label>
@@ -188,10 +203,6 @@
 	</div>
 </div>
 
-<script async src="./assets/bootstrap/bootstrap.bundle.min.js"></script>
-<script async src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script async src="./assets/maugallery.min.js"></script>
-<script async src="./assets/scripts.js"></script>
 
 </body>
 
