@@ -23,40 +23,37 @@ Fleche_droite.addEventListener("click", () => changeSlide("droite"));
 
 let count = 0;
 
-// Add this line after declaring the 'dots' variable
 window.addEventListener('DOMContentLoaded', (event) => {
-    // Set the initial slide and dot state
     changeSlide("initial");
 });
 
 function changeSlide(direction) {
     dots.forEach(dot => dot.classList.remove("dot_selected"));
-    imageContainer.style.transition = "transform 0s"; // Désactiver la transition temporairement
-
+    imageContainer.style.transition = "transform 0s"; 
     if (direction === "gauche") {
         count--;
         if (count < 0) {
             count = slides.length - 1;
         }
-        imageContainer.style.transform = "translateX(-100%)"; // Déplacer l'image actuelle hors de l'écran à gauche
+        imageContainer.style.transform = "translateX(-100%)"; 
         setTimeout(() => {
             const slide = slides[count];
-            imageContainer.src = slide.image; // Changer l'image
-            imageContainer.style.transition = "transform 0.4s ease-in-out"; // Réactiver la transition
-            imageContainer.style.transform = "translateX(0)"; // Faire glisser la nouvelle image sur l'écran
-        }, 50); // Attendre un court instant avant de changer l'image pour permettre à l'image de sortir de l'écran
+            imageContainer.src = slide.image; 
+            imageContainer.style.transition = "transform 0.4s ease-in-out"; 
+            imageContainer.style.transform = "translateX(0)";
+        }, 50); 
     } else if (direction === "droite") {
         count++;
         if (count === slides.length) {
             count = 0;
         }
-        imageContainer.style.transform = "translateX(100%)"; // Déplacer l'image actuelle hors de l'écran à droite
+        imageContainer.style.transform = "translateX(100%)"; 
         setTimeout(() => {
             const slide = slides[count];
-            imageContainer.src = slide.image; // Changer l'image
-            imageContainer.style.transition = "transform 0.4s ease-in-out"; // Réactiver la transition
-            imageContainer.style.transform = "translateX(0)"; // Faire glisser la nouvelle image sur l'écran
-        }, 50); // Attendre un court instant avant de changer l'image pour permettre à l'image de sortir de l'écran
+            imageContainer.src = slide.image;
+            imageContainer.style.transition = "transform 0.4s ease-in-out"; 
+            imageContainer.style.transform = "translateX(0)"; 
+        }, 50); 
     } else if (direction === "initial") {
         count = 0;
     }
@@ -67,6 +64,7 @@ function changeSlide(direction) {
             changeSlide(index);
         });
     });
+    
 }
 
 
