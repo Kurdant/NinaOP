@@ -31,24 +31,35 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
 function changeSlide(direction) {
     dots.forEach(dot => dot.classList.remove("dot_selected"));
+    imageContainer.style.transition = "transform 0s"; // Désactiver la transition temporairement
 
     if (direction === "gauche") {
         count--;
         if (count < 0) {
             count = slides.length - 1;
         }
+        imageContainer.style.transform = "translateX(-100%)"; // Déplacer l'image actuelle hors de l'écran à gauche
+        setTimeout(() => {
+            const slide = slides[count];
+            imageContainer.src = slide.image; // Changer l'image
+            imageContainer.style.transition = "transform 0.4s ease-in-out"; // Réactiver la transition
+            imageContainer.style.transform = "translateX(0)"; // Faire glisser la nouvelle image sur l'écran
+        }, 50); // Attendre un court instant avant de changer l'image pour permettre à l'image de sortir de l'écran
     } else if (direction === "droite") {
         count++;
         if (count === slides.length) {
             count = 0;
         }
+        imageContainer.style.transform = "translateX(100%)"; // Déplacer l'image actuelle hors de l'écran à droite
+        setTimeout(() => {
+            const slide = slides[count];
+            imageContainer.src = slide.image; // Changer l'image
+            imageContainer.style.transition = "transform 0.4s ease-in-out"; // Réactiver la transition
+            imageContainer.style.transform = "translateX(0)"; // Faire glisser la nouvelle image sur l'écran
+        }, 50); // Attendre un court instant avant de changer l'image pour permettre à l'image de sortir de l'écran
     } else if (direction === "initial") {
         count = 0;
     }
-
-    const slide = slides[count];
-    imageContainer.src = slide.image;
-
 
     dots[count].classList.add("dot_selected");
     dots.forEach((dot, index) => {
@@ -56,16 +67,7 @@ function changeSlide(direction) {
             changeSlide(index);
         });
     });
-    
-    function changeSlide(index) {
-        dots.forEach(dot => dot.classList.remove("dot_selected"));
-        
-        count = index;
-    
-        const slide = slides[count];
-        imageContainer.src = slide.image;
-    
-        dots[count].classList.add("dot_selected");
-    }
 }
+
+
 
