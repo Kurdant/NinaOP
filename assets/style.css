@@ -7,10 +7,10 @@
 }
 .about-me__introduction, .quote, .quote__text {
     font-style: italic;
-    font-family: Spectral,  Arial,  Helvetica,  sans-serif;
+    font-family: Spectral,  serif,  'Times New Roman';
 }
 .quote, .quote__author, .quote__text {
-    font-family: Spectral,  Arial,  Helvetica,  sans-serif;
+    font-family: Spectral,  serif,  'Times New Roman';
 }
 #about, #contact {
     padding-inline: 100px;
@@ -32,7 +32,7 @@ body {
     min-height: 200vh;
 }
 * {
-    font-family: Inter,  Arial,  Helvetica,  sans-serif;
+    font-family: Inter,  sans-serif, Helvetica;
     font-style: normal;
 }
 .top-header {
@@ -107,7 +107,7 @@ body {
 }
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
     color: #000;
-    background-color: #fff;
+    background-color: #E5975F;
     border-radius: 0;
 }
 .item-column {
